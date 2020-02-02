@@ -5,7 +5,7 @@
   "identifier": "viewfinder.plugin",
   "description": "Easy access anywhere in you project file",
   "authorEmail": "ahmad.migo@gmail.com",
-  "URL": "https://github.com/ahmedmigo/viewFinder-sketchplugin",
+  "URL": "https://github.com/ahmedmigo/ViewFinder-Sketchplugin",
   "author": "Ahmed Genaidy",
   "icon": "icon.png",
   "commands": [
