@@ -1,7 +1,7 @@
 {
   "compatibleVersion": 3,
   "bundleVersion": 1,
-  "name": "viewFinder",
+  "name": "view Finder",
   "identifier": "viewfinder.plugin",
   "description": "Easy access anywhere in you project file",
   "authorEmail": "ahmad.migo@gmail.com",
