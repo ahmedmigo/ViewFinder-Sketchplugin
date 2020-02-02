@@ -1,0 +1,163 @@
+  <html>
+    <head>
+      <meta charset="utf-8">
+      <title>viewFinder</title>
+      <link rel="stylesheet" href="03368c8e95812b30f164eddc6098dba3.css";">
+    </head>
+    <body>
+      <div class="searchContanier">
+        <input class="searchInput" placeholder="Search..." type="text" id="myInput" onkeyup="filterList()"></input>
+        <ul id="listcontanier">
+        </ul>
+      </div>
+      
+      <div class="newView">
+          <input class="newViewInput" placeholder="Create view with name.." type="text" id="newViewInput"></input>
+          <button class="buttoncreate" id="buttoncreate"> create </button>
+      </div>
+      <div class="footer">
+          <div class="footertext">
+              Created by 
+              <a href="#" onClick="openLink('https://twitter.com/ser_migo');"> Ahmed Genaidy</a>
+          </div>
+          <button class="buttonDonate" onClick="openLink('https://www.paypal.me/genaidy/5');">
+              Buy me a coffee ☕️
+          </button>
+      </div>
+    </body>
+  </html>
+
+  <script>
+  document.getElementById('buttoncreate').onclick = () => {
+  const viewportName = document.getElementById('newViewInput').value;
+  if (viewportName) {
+     window.postMessage('add-view-port', viewportName)
+     document.getElementById('newViewInput').value = ""
+  }
+}
+
+
+window.updateListfromSketch = (viewportsList) => {
+  console.log(viewportsList)
+  updateList (viewportsList)
+}
+
+function showDropdown(elem) {
+elem.parentElement.childNodes[1].classList.toggle("show")
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+
+function filterList() { 
+  // Declare variables
+  var input, filter, ul, li, div, i, txtValue;
+  input = document.getElementById('myInput');
+  filter = input.value.toUpperCase();
+  //console.log(filter) /*,,, changes to uppercase */
+  ul = document.getElementById('listcontanier');
+  li = ul.getElementsByTagName('li');
+  // Loop through all list items, and hide those who don't match the search query
+  for (i = 0; i < li.length; i++) {
+    div = li[i].getElementsByTagName("div")[0];
+    //console.log(a);
+    txtValue = div.textContent || div.innerText;
+    //console.log(txtValue);
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      li[i].style.display = "";
+    } else {
+      li[i].style.display = "none";
+    }
+  }
+}
+
+
+function updateList (items) {
+  var ul = document.getElementById('listcontanier');
+  while(ul.firstChild) ul.removeChild(ul.firstChild);
+  for (var i = 0; i < items.length; i++) {
+    var item = items[i];
+
+    var listItem = document.createElement("li");
+    listItem.className = "list"
+
+    var textdiv = document.createElement('div')
+    textdiv.className = "listText"
+    textdiv.innerText = items[i]
+    textdiv.setAttribute("value",item)
+    textdiv.setAttribute("onclick","listClick(this)")
+
+    textdiv.textContent = item;
+
+    var dropdownDiv = document.createElement('div')
+    dropdownDiv.className = "dropdown"
+
+    var dropdownButton = document.createElement('button')
+    dropdownButton.className = "dropbtn"
+    dropdownButton.setAttribute("onclick","showDropdown(this)")
+    dropdownButton.innerText = "•••"
+
+    var dropdownContent = document.createElement('div')
+    dropdownContent.className = "dropdown-content"
+    dropdownContent.id = "myDropdown"
+
+    var dropdownUpdate = document.createElement('a')
+    dropdownUpdate.href = '#'
+    dropdownUpdate.innerText = 'Update'
+    dropdownUpdate.setAttribute("value",item)
+    dropdownUpdate.setAttribute("onclick","updateClick(this)")
+
+    var dropdownDelete = document.createElement('a')
+    dropdownDelete.href = '#'
+    dropdownDelete.innerText = 'Delete'
+    dropdownDelete.setAttribute("value",item)
+    dropdownDelete.setAttribute("onclick","removeClick(this)")
+
+    dropdownContent.appendChild(dropdownUpdate)
+    dropdownContent.appendChild(dropdownDelete)
+
+    dropdownDiv.appendChild(dropdownButton)
+    dropdownDiv.appendChild(dropdownContent)
+
+    listItem.appendChild(textdiv);
+    listItem.appendChild(dropdownDiv);
+
+    ul.appendChild(listItem);
+  }
+}
+
+
+function listClick(elem) {
+    var viewportName = elem.getAttribute('value');
+    window.postMessage('set-view-port', viewportName)
+    console.log('set-view-port', viewportName)
+  }
+
+function removeClick(elem) {
+    var viewportName = elem.getAttribute('value');
+    window.postMessage('remove-view-port', viewportName)
+    console.log('remove-view-port', viewportName)
+}
+
+function updateClick(elem) {
+    var viewportName = elem.getAttribute('value');
+    window.postMessage('add-view-port', viewportName)
+    console.log('add-view-port', viewportName)
+}
+
+
+function openLink(url) {
+  window.postMessage('externalLinkClicked', url) 
+}
+  </script>

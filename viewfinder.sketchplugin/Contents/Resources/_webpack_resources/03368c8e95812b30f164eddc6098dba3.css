@@ -1,0 +1,189 @@
+.searchInput {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #DEDEDE;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 1px solid #DEDEDE;
+  line-height: 18px;
+  position: fixed;
+  z-index: 100;
+}
+
+
+body {
+  margin: 0px;
+  background: white;
+}
+#listcontanier{
+  list-style-type: none;
+  padding: 0px;
+  margin: 10px;
+  list-style-type: none;
+  padding: 0px;
+  margin: 10px;
+  margin-right: 0px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 29px;
+  height: 288px;
+  overflow: auto;
+}
+
+input:focus {
+  outline:none;
+}
+
+.list {
+  background: #F7F7F9;
+  border: 1px solid #DEDEE1;
+  box-sizing: border-box;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  margin-top: 10px;
+  margin-right: 10px;
+  display: flex;
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  height: auto;
+  cursor: pointer;
+}
+
+.list:hover, .list:focus  {
+  background: #F9F9F9;
+  border: 1px solid #4398d4;
+}
+
+.listText {
+  flex: 4;
+  padding: 9px;
+  align-self: center;
+}
+.dropdown {
+  position: relative;
+  align-self: center;
+  margin-right: -2px;
+  float: right;
+}
+
+.dropdown > button {
+  margin-right: 3px;
+  height: 30px;
+  width: 30px;
+  max-height: 30px;
+  max-width: 30px;
+  background: none;
+  border: none;
+  transform: rotate(90deg);
+  align-self: center;
+  border-radius: 100%;
+  cursor: pointer;
+}
+
+.dropdown > button:hover, .dropdown > button:focus{
+  background:#eaeaea;
+  outline:none;
+}
+
+.dropdown-content {
+display: none;
+position: absolute;
+border: 1px solid #d2d2d2;
+background-color: #f1f1f1;
+min-width: 160px;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+z-index: 1;
+right:0
+}
+
+
+.dropdown-content a {
+color: black;
+padding: 12px 16px;
+text-decoration: none;
+display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd}
+
+.show {display:block;}
+
+.footer {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-top: 1px solid;
+  border-color: #eaeaea;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10px;
+  align-items: center;
+  padding: 4px 11px 4px 11px;}
+.footertext{
+  flex: 4;
+}
+
+.footertext > a {
+  color: #05C1EA
+}
+
+.newView{
+  display: flex;
+  position: absolute;
+  bottom: 28px;
+  left: 0;
+  right: 0;
+  border-top: 1px solid;
+  border-color: #eaeaea;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10px;
+  align-items: center;
+  margin-bottom: 6px;
+  background: white;
+  padding: 10px 12px 6px 10px;   
+}
+
+.newViewInput{
+  width: 100%;
+  padding: 2px;
+  padding-bottom: 6px;
+  border: 1px solid #DEDEDE;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 1px solid #DEDEDE;
+}
+
+.buttoncreate{
+  margin-left: 14px;
+  height: 22px;
+  background-color: #05C1EA;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  outline:none;
+}
+.buttoncreate:hover{
+background-color: #00A5C9;
+}
+
+.buttonDonate{
+  margin-left: 14px;
+  height: 22px;
+  background-color: #eaeaea;
+  color: #4c4c4c;
+  border-radius: 5px;
+  border: none;
+  outline:none;
+}
+
+.buttonDonate:hover{
+background-color: #dcdcdc;
+}

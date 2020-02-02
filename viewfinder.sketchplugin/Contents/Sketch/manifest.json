@@ -1,0 +1,37 @@
+{
+  "compatibleVersion": 3,
+  "bundleVersion": 1,
+  "commands": [
+    {
+      "name": "viewFinder",
+      "identifier": "viewfinder.viewFinder-identifier",
+      "description": "Easy access anywhere in you project file",
+      "authorEmail": "ahmad.migo@gmail.com",
+      "URL": "https://github.com/ahmedmigo/viewFinder-sketchplugin",
+      "author": "Ahmed Genaidy",
+      "icon": "icon.png",
+      "shortcut": "ctrl shift f",
+      "script": "__my-command.js",
+      "handlers": {
+        "run": "onRun",
+        "actions": {
+          "Shutdown": "onShutdown"
+        }
+      }
+    }
+  ],
+  "menu": {
+    "title": "viewFinder",
+    "isRoot": true,
+    "items": [
+      "viewfinder.viewFinder-identifier"
+    ]
+  },
+  "version": "0.1.1",
+  "name": "viewFinder",
+  "identifier": "viewFinder",
+  "disableCocoaScriptPreprocessor": true,
+  "appcast": "https://raw.githubusercontent.com//master/.appcast.xml",
+  "author": "Ahmedgenaidy",
+  "authorEmail": "agenaidy@ebay.com"
+}
