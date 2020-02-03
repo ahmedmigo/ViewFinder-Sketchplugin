@@ -2,7 +2,7 @@
 <p>
 You can now design any viewport in the canvas and give it a name. and jump to it any time you want go to it
 </p>
-<img align="middle" src="https://github.com/ahmedmigo/viewFinder-sketch-plugin/blob/master/viewFInder.gif?raw=true">
+<img align="middle" src="https://github.com/ahmedmigo/ViewFinder-Sketchplugin/blob/master/viewFInder.gif?raw=true">
 <p>
 You can now move symbol from your project to any library 🔁 and re-attach all the symbol instances to this library. also it keep the overrides without any problems and it work with abstract that have libraries not in your local machine.
 </p>
@@ -40,5 +40,3 @@ Available on
 <a href="http://bit.ly/SketchRunnerWebsite">
      <img  width="160" height="41" src="http://bit.ly/RunnerBadgeBlue">
 </a>
-
-
