@@ -4,23 +4,20 @@ You can now design any viewport in the canvas and give it a name. and jump to it
 </p>
 <img align="middle" src="https://github.com/ahmedmigo/ViewFinder-Sketchplugin/blob/master/viewFInder.gif?raw=true">
 <p>
-You can now move symbol from your project to any library 🔁 and re-attach all the symbol instances to this library. also it keep the overrides without any problems and it work with abstract that have libraries not in your local machine.
 </p>
 
 <h1> How it works </h1>
 <p>
 Scroll and zoom to the view you want to add. </br>
 </br>
-write name of the view</br>
+go to the plugin panel, In the bottom of the plugin window you will find "create view with name" field.</br>
 </br>
-Click on the added view when you want to access it </br>
+Type the name of the view you want.  </br>
 </br>
-Volaaaa 🎉 you jump to your view with one click 😎
+the view will be added in the plugin list.
+You can access it anytime by clicking on the list
 </br>
 </br>
-<br>
-if you saved your time shout me some coffee to be awake for improvements ☕️
-<br>
 <a href="https://www.paypal.me/genaidy/5">
 <img width="160" height="41" src="https://raw.githubusercontent.com/DWilliames/PDF-export-sketch-plugin/master/images/paypal-badge.png">
 </br>
@@ -40,3 +37,5 @@ Available on
 <a href="http://bit.ly/SketchRunnerWebsite">
      <img  width="160" height="41" src="http://bit.ly/RunnerBadgeBlue">
 </a>
+
+
